@@ -14,22 +14,22 @@ function computerPlay() {
     if (playerSelection.toLowerCase() === "rock") {
       if (computerSelection === "paper") {
         computerScore++;
-        return lose;
+        return lose + " Paper beats Rock!";
       } else if (computerSelection === "rock") {
         return tie;
       } else {
         userScore++;
-        return win;
+        return win + " Rock beats Scissors!";
       }
     }
   
     if (playerSelection.toLowerCase() === "scissors") {
       if (computerSelection === "paper") {
         userScore++;
-        return win;
+        return win + " Scissors beat Paper!";
       } else if (computerSelection === "rock") {
         computerScore++;
-        return lose;
+        return lose + " Rock beats Scissors!";
       } else {
         return tie;
       }
@@ -40,10 +40,10 @@ function computerPlay() {
         return tie;
       } else if (computerSelection === "rock") {
         userScore++;
-        return win;
+        return win + " Paper beats Rock!";
       } else {
         computerScore++;
-        return lose;
+        return lose + " Scissors beat Paper!";
       }
     }
   }
@@ -51,7 +51,7 @@ function computerPlay() {
   
   let userScore = parseInt(0);
   let computerScore = parseInt(0);
-  let win = "You win"
+  let win = "You win!"
   let lose = "You lose"
   let tie = "It is a tie"
   
