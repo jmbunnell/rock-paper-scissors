@@ -11,6 +11,10 @@ function computerPlay() {
   
   
   function playRound(playerSelection, computerSelection) {
+    if (playerSelection === null) {
+        return "Round Skipped"
+    }
+    
     if (playerSelection.toLowerCase() === "rock") {
       if (computerSelection === "paper") {
         computerScore++;
@@ -46,6 +50,7 @@ function computerPlay() {
         return lose + " Scissors beat Paper!";
       }
     }
+
   }
   
   
@@ -62,3 +67,5 @@ function computerPlay() {
     console.log("your score = " + userScore);
     console.log("Computer's score = " + computerScore);
   }
+
+  
