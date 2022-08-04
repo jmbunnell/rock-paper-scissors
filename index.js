@@ -20,16 +20,30 @@ console.log(result);
 
 //playing single round against computer
 function playRound(playerSelection, computerSelection) {
-    if (playerSelection !== computerSelection && computerSelection === 'Scissors') {
+    if (playerSelection !== computerSelection && computerSelection === 'Scissors' && playerSelection === 'Rock') {
         return "You win! Rock beats Scissors";
+    } else if (playerSelection !== computerSelection && computerSelection === 'Paper' && playerSelection === 'Rock') {
+        return "You lose! Paper beats Rock";
+    } else if (playerSelection !== computerSelection && computerSelection === 'Scissors' && playerSelection === 'Paper') {
+        return "You lose! Scissors beats Paper";
+    } else if (playerSelection !== computerSelection && computerSelection === 'Rock' && playerSelection === 'Paper') {
+        return "You win! Paper beats Rock";
+    } else if (playerSelection !== computerSelection && computerSelection === 'Rock' && playerSelection === 'Scissors') {
+        return "You lose! Rock beats Scissors";
+    } else if (playerSelection !== computerSelection && computerSelection === 'Paper' && playerSelection === 'Scissors') {
+        return "You win! Scissors beats Paper";
     } else if (playerSelection === computerSelection) {
-        return "Tie game!";
+        return "Tie game! Play again";
     } else {
-        return "You lose! Paper beats rock!"
-    }
-  }
+        return "Error, enter valid choice";
+    }   
+}  
+    
+    
+    
+ 
    
-const playerSelection = "Rock";
+const playerSelection = prompt("Rock, Paper, or Scissors?");
 const computerSelection = result;
 console.log(playRound(playerSelection, computerSelection));
 
