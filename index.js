@@ -57,8 +57,8 @@ function computerPlay() {
   let userScore = parseInt(0);
   let computerScore = parseInt(0);
   let win = "You win!"
-  let lose = "You lose"
-  let tie = "It is a tie"
+  let lose = "You lose!"
+  let tie = "It is a tie!"
   
   for(var i=0;i<5;i++){
     let playerSelection = prompt("Pick a move");
