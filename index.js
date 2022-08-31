@@ -1,6 +1,17 @@
 let winners = [];
 const choices = ["rock", "paper", "scissors"];
 
+function resetGame() {
+  winners = [];
+  document.querySelector(".playerScore").textContent = "Score: 0";
+  document.querySelector(".computerScore").textContent = "Score: 0";
+  document.querySelector(".ties").textContent = "Ties: 0";
+  document.querySelector(".winner").textContent = "";
+  document.querySelector(".playerChoice").textContent = "";
+  document.querySelector(".computerChoice").textContent = "";
+  document.querySelector(".reset").style.display = "none";
+}
+
 function startGame() {
   //play game until someone wins 5 times
   let imgs = document.querySelectorAll("img");
@@ -40,7 +51,7 @@ function displayEnd() {
     document.querySelector(".winner").textContent = 
       'Sorry, the computer won 5 times!';
   }
-  document.querySelector(".reset").getElementsByClassName.display = "flex";
+  document.querySelector(".reset").style.display = "flex";
 }
 
 function displayRound(playerChoice, computerChoice, winner) {
@@ -51,6 +62,17 @@ function displayRound(playerChoice, computerChoice, winner) {
     computerChoice.charAt(0).toUpperCase().slice(1)
   }`;
   document.querySelector(".winner").textContent = `Round Winner: ${winner}`;
+}
+
+function displayRoundWinner(winner) {
+  if (winner == "Player") {
+    document.querySelector(".winner").textContent = "You won the Round!";
+  } else if (winner == "Computer") {
+    document.querySelector(".winner").textContent =
+      "The Computer won the Round";
+  } else {
+    document.querySelector(".winner").textContent = "The Round was a tie";
+  }
 }
 
 function tallyWins(){
