@@ -8,7 +8,7 @@ function computerPlay() {
       return "scissors";
     }
   }
-  
+
   
   function playRound(playerSelection, computerSelection) {
     if (playerSelection === null) {
@@ -27,7 +27,7 @@ function computerPlay() {
       }
     }
   
-    if (playerSelection.toLowerCase() === "scissors") {
+   /* if (playerSelection.toLowerCase() === "scissors") {
       if (computerSelection === "paper") {
         userScore++;
         return win + " Scissors beat Paper!";
@@ -50,8 +50,15 @@ function computerPlay() {
         return lose + " Scissors beat Paper!";
       }
     }
-
+    //document.getElementsByClassName("demo").textContent = playRound();
+    
+    //return rockButton;*/
   }
+  
+  let rock = document.getElementsByClassName("rock");
+  document.textContent = playRound;
+  let rockButton = document.addEventListener("click", rock);
+  
   
   
   let userScore = parseInt(0);
@@ -60,6 +67,11 @@ function computerPlay() {
   let lose = "You lose!"
   let tie = "It is a tie!"
   
+
+
+
+
+
   /*
   for(var i=0;i<5;i++){
     let playerSelection = prompt("Pick a move");
