@@ -59,7 +59,7 @@ function tallyWins(){
   const ties = winners.filter((item) => item == "Tie").length;
   document.querySelector('.playerScore').textContent = `Score: ${pWinCount}`;
   document.querySelector('.computerScore').textContent = `Score: ${cWinCount}`;
-  document.querySelector('.ties').textContent = `Score: ${ties}`;
+  document.querySelector('.ties').textContent = `Ties: ${ties}`;
 }
 
 function computerSelect() {
