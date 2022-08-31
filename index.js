@@ -60,6 +60,7 @@ function computerPlay() {
   let lose = "You lose!"
   let tie = "It is a tie!"
   
+  /*
   for(var i=0;i<5;i++){
     let playerSelection = prompt("Pick a move");
     const computerSelection = computerPlay()
@@ -67,5 +68,6 @@ function computerPlay() {
     console.log("your score = " + userScore);
     console.log("Computer's score = " + computerScore);
   }
+  */
 
   
